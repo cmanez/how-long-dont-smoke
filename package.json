@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "iconify": "^1.4.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@vitejs/plugin-vue": "^5.0.3",
     "sass": "^1.70.0",
     "sass-loader": "^14.1.0",
