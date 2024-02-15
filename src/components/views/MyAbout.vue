@@ -1,9 +1,10 @@
 <template>
-        <Icon icon="uil:18-plus"/>
+    <div>
+        
+    </div>
 </template>
 
 <script setup>
-import { Icon } from '@iconify/vue'
 
 </script>
 

@@ -13,14 +13,14 @@ export default {
 
 <style lang="scss" scoped>  
 .btn{
-  background-color: #c177b2;
-  background-image: linear-gradient(315deg, #c177b2 0%, #e2e1e1 74%);
+  color:$btn-text;
   border: none;
   padding: 0.3rem;
   border-radius: 5px;
   &:hover{
     scale: 1.05;
   }
-
+  background: rgb(80,78,79);
+  background: linear-gradient(90deg, rgba(80,78,79,1) 0%, rgba(43,39,39,1) 100%);
 }
 </style>

@@ -6,14 +6,14 @@ import App from './App.vue'
 import router from '@/router'
 import '@/style.scss'
 const app = createApp(App)
-
+const pinia = createPinia()
 components.forEach(component => {
     app.component(component.name, component)
     
 });
 
 app
-.use(createPinia)
+.use(pinia)
 .use(router)
 .component('MainLayout', MainLayout)
 .mount('#app')
