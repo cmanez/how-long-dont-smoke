@@ -1,21 +1,26 @@
 <template>
        <div class="dontsmoke">
-              <h2 class="dontsmoke_header">Узнай сколько ты сэкономил денег</h2> 
+              <h2 class="dontsmoke_header" @click="console.log(isNaN(homeState.usageValue))">Узнай сколько ты сэкономил денег</h2> 
               <MySelect name="drugs" :options="selectState.drugsArray"></MySelect>
-              <MyInput  class="hi" placeholder="Сколько ты употреблял за день (пачек/грамм)?"></MyInput>
-              <MyInput class="hi" placeholder="Укажи стоимость за единцу продукта (пачки/грамма)"></MyInput>
-              <MyInput class="hi" placeholder="Сколько дней ты уже не употребляшь?"></MyInput>
-              <div class="dontsmoke_final-value">{{ WellDone }} </div>
-              <div class="dontsmoke_fact"> Интересный факт:  </div>
+              <MyInput v-model="homeState.usageValue" placeholder="Сколько ты употреблял за день (пачек/грамм)?"></MyInput>
+              <MyInput v-model="homeState.costValue" placeholder="Укажи стоимость за единцу продукта (пачки/грамма) в рублях"></MyInput>
+              <MyInput v-model="homeState.daysValue" placeholder="Сколько дней ты уже не употребляшь?"></MyInput>
+              
+              <div v-if="homeState.usageValue && homeState.costValue && homeState.daysValue"> {{ homeState.endCost.value }} </div>
+              <div class="dontsmoke_final-value" > </div>
+              <div class="dontsmoke_fact"> Интересный факт: </div>
        </div>
 </template>
 
 <script setup>
 import { selectStore } from '@/components/store/select_store.js'
+import { homeStore } from '@/components/store/home_store.js'
 import MyInput from '../UI/MyInput.vue';
+
 const selectState = selectStore()
-const counter = 0;
-const WellDone = `Ты сэкономил  ${ counter } рублей, так держать, не останавливайся на этом, бро! <3`;
+const homeState = homeStore()
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -36,7 +41,5 @@ const WellDone = `Ты сэкономил  ${ counter } рублей, так д�
               text-align: center;
               font-weight: 300;
        }
-    
-
 }
 </style>
