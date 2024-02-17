@@ -1,12 +1,12 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const selectStore = defineStore('select', () => {
     const drugsArray = [{name: 'Сигареты'}, {name: 'Марихуанна'}]
-    const modelValue = ref('')
-    
+    // const nameOfDrug = ref('')
+
     return {
         drugsArray,
-        modelValue
+        // nameOfDrug,
     }
 })

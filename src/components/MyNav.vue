@@ -1,7 +1,7 @@
 <template>
     <div class="nav"> 
-            <MyButton>Getting started</MyButton>
-            <MyButton>About us</MyButton> 
+            <MyButton @click="$router.push('/')" >Getting started</MyButton>
+            <MyButton @click="$router.push('/about')">About us</MyButton> 
         </div>
 </template>
 

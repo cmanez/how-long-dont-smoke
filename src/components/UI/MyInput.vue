@@ -1,5 +1,5 @@
 <template>
-    <input  :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
+    <input  :value="modelValue" @input="action">
 </template>
 
 <script>
@@ -14,16 +14,15 @@ export default {
             type: [String]
         }
     })
+    const emit = defineEmits(['action'])
+    const action = (event) => {emit('update:modelValue', event.target.value)}
 </script>
 
 
 <style lang="scss" scoped>
  input{
     appearance: none;
-  /* safari */
   -webkit-appearance: none;
-  /* other styles for aesthetics */
-  width: 50%;
   font-size: 1.15rem;
   padding: 0.675em 6em 0.675em 1em;
   background-color: $glass-gray;
