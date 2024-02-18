@@ -1,15 +1,6 @@
 <template>
-    <button class="btn"><slot></slot></button>
+    <button class="btn" type="button"><slot></slot></button>
 </template>
-
-<script setup>
-
-</script>
-<script>
-export default {
-    name: 'MyButton'
-}
-</script>
 
 <style lang="scss" scoped>  
 .btn{

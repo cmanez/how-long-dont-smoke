@@ -23,8 +23,6 @@ import MyFooter from '@/components/MyFooter.vue';
     align-content: center;
     width: 100%;
     height: 100%;
-    
-
 .content-slot{
     display: flex;
     justify-content: center;
@@ -32,6 +30,4 @@ import MyFooter from '@/components/MyFooter.vue';
     padding: 2rem 10rem 2rem 10rem;
 }
 }
-
-  
 </style>

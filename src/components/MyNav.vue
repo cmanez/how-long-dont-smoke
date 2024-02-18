@@ -1,12 +1,15 @@
 <template>
     <div class="nav"> 
-            <MyButton @click="$router.push('/')" >Getting started</MyButton>
-            <MyButton @click="$router.push('/about')">About us</MyButton> 
+            <MyButton @click="$router.push('/home')" >Getting started</MyButton>
+            <div class="nav_btn-wrapper">
+                <MyButton @click="$router.push('/')">Home</MyButton>
+                <MyButton @click="$router.push('/about')">About</MyButton> 
+            </div>
         </div>
 </template>
 
 <script setup>
-
+import MyButton from '@/components/UI/MyButton.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -20,5 +23,14 @@
     background-color: $light-orange;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    &_btn-wrapper{
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+        margin-right: 1rem;
+        :last-child{
+            margin-right: 0;
+        }
+    }
     }
 </style>

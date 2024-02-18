@@ -8,9 +8,8 @@
                 <div class="footer_links_vertborder"></div>
                 <div class="footer_links_link-item">
                     <li><icon class="icon" icon="ri:vk-fill"/><a href="https://vk.com/sevrin_a">VK</a></li> 
-                    <li><icon class="icon" icon="mdi:instagram"/><a href="">Instagram</a></li>
+                    <li><icon class="icon" icon="mdi:instagram"/><a href="https://www.instagram.com/lean.044">Instagram</a></li>
                 </div>
-                
             </ul>
         </div>
 </template>
@@ -66,6 +65,5 @@
             
         }
     }
-    
 }
 </style>

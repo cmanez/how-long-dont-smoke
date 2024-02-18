@@ -2,12 +2,6 @@
     <input  :value="modelValue" @input="action">
 </template>
 
-<script>
-export default {
-    name: 'MyInput'
-}
-</script>
-
 <script setup>
   const props = defineProps({
         modelValue: {
@@ -18,13 +12,12 @@ export default {
     const action = (event) => {emit('update:modelValue', event.target.value)}
 </script>
 
-
 <style lang="scss" scoped>
  input{
     appearance: none;
   -webkit-appearance: none;
   font-size: 1.15rem;
-  padding: 0.675em 6em 0.675em 1em;
+  padding: 0.675rem 1rem;
   background-color: $glass-gray;
   border-radius: 0.25rem;
   
