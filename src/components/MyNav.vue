@@ -1,6 +1,6 @@
 <template>
     <div class="nav"> 
-            <MyButton @click="$router.push('/home')" >Getting started</MyButton>
+            <MyButton @click="$router.push('/home')" >Start</MyButton>
             <div class="nav_btn-wrapper">
                 <MyButton @click="$router.push('/')">Home</MyButton>
                 <MyButton @click="$router.push('/about')">About</MyButton> 

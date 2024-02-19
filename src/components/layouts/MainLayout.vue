@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <MyNav></MyNav>
-            <div class="content-slot">
+            <div class="content-slot" >
                 <slot></slot>
             </div>
         <MyFooter></MyFooter>
@@ -29,5 +29,6 @@ import MyFooter from '@/components/MyFooter.vue';
     align-items: center;
     padding: 2rem 10rem 2rem 10rem;
 }
+
 }
 </style>

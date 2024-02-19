@@ -5,18 +5,20 @@
               <MyInput class="dontsmoke_input" v-model="homeState.usageValue" placeholder="Сколько ты употреблял за день (пачек/грамм)?"></MyInput>
               <MyInput class="dontsmoke_input" v-model="homeState.costValue" placeholder="Укажи стоимость за единцу продукта (пачки/грамма) в рублях"></MyInput>
               <MyInput class="dontsmoke_input" v-model="homeState.daysValue" placeholder="Сколько дней ты уже не употребляшь?"></MyInput>
-      
-              <div  v-if="homeState.usageValue && homeState.costValue && homeState.daysValue"> {{ homeState.endCost.value }} </div>
-              <div class="dontsmoke_final-value"></div>
-              <div class="dontsmoke_fact" v-if="homeState.usageValue && homeState.costValue && homeState.daysValue && homeState.nameOfDrug"> Интересный факт: <span class="dontsmoke_fact-random">{{ homeState.randomFact }}</span></div>          
+              <Transition name="fade" mode="out-in"> 
+                     <div :key="Date.now()" class="fact-wrapper">
+                            <div  v-show="homeState.usageValue && homeState.costValue && homeState.daysValue"> {{ homeState.endCost.value }} </div>
+                            <div class="dontsmoke_fact" v-show="homeState.usageValue && homeState.costValue && homeState.daysValue && homeState.nameOfDrug"> Интересный факт: <span class="dontsmoke_fact-random">{{ homeState.randomFact }}</span></div> 
+                     </div>
+              </Transition>         
        </div>
 </template>
 
 <script setup>
 import { selectStore } from '@/components/store/select_store.js'
 import { homeStore } from '@/components/store/home_store.js'
-import MyInput from '../UI/MyInput.vue';
-import MySelect from '../UI/MySelect.vue';
+import MyInput from '@/components/UI/MyInput.vue';
+import MySelect from '@/components/UI/MySelect.vue';
 
 const selectState = selectStore()
 const homeState = homeStore()
@@ -29,8 +31,8 @@ const homeState = homeStore()
        flex-direction: column;
        justify-content: space-between;
        align-items: center;
-       height: 100%;
-       width: 80%;
+       height: 45rem;
+       width: 70rem;
        background: $glass-gray;
        box-shadow: 0 8px 32px 0 $footer-gray;
        backdrop-filter: blur( 9.5px );
@@ -53,5 +55,20 @@ const homeState = homeStore()
        &_input{
               width: 70%;
        }
+       .fact-wrapper{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              height: 20%;
+       }
+       .fade-enter-active
+              {
+              transition: opacity 1s ease;
+              }
+
+       .fade-enter-from,
+       .fade-leave-to {
+              opacity: 0;
+              }
 }
 </style>
