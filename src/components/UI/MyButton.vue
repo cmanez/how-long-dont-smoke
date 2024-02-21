@@ -1,9 +1,12 @@
 <template>
-    <button class="btn" type="button"><slot></slot></button>
+    <button class="btn" type="button" ><slot></slot></button>
 </template>
 
 <style lang="scss" scoped>  
 .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color:$btn-text;
   border: none;
   padding: 0.3rem;

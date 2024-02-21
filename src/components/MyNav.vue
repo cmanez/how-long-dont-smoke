@@ -32,5 +32,14 @@ import MyButton from '@/components/UI/MyButton.vue';
             margin-right: 0;
         }
     }
+    
+    }
+    @media (max-width: 767px){
+        .nav{
+            width: 80%;
+            &_btn-wrapper{
+                width: 50%;
+            }
+        }
     }
 </style>

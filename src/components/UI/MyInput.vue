@@ -16,8 +16,7 @@
  input{
     appearance: none;
   -webkit-appearance: none;
-  font-size: 1.15rem;
-  padding: 0.675rem 1rem;
+  padding: 0.675rem 0.675rem;
   background-color: $glass-gray;
   border-radius: 0.25rem;
   

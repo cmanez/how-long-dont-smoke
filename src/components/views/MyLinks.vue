@@ -14,7 +14,7 @@
 <style lang="scss" scoped>
 .dontsmoke{
     flex-direction: row;
-    height: auto;
+    height: 50%;
     width: auto;
 }
 
@@ -23,4 +23,15 @@
     height: 7rem;
     color: $btn-text;
 }
+@media (max-width: 767px){
+        .dontsmoke{
+            flex-direction: column;
+            height: 55%;
+        }
+        .links-icon{
+            
+            width: 3rem;
+            height: 3rem;//переделать
+        }
+    }
 </style>

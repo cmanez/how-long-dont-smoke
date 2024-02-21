@@ -32,7 +32,7 @@ const emit = defineEmits(['action'])
 <style lang="scss" scoped>
 select {
   font-size: 1.15rem;
-  padding: 0.675em 6em 0.675em 1em;
+  padding: 0.675rem 1rem 0.675rem 1rem;
   background-color: $glass-gray;
   border: 1px solid #caced1;
   border-radius: 0.25rem;

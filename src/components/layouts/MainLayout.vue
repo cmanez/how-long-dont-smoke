@@ -31,4 +31,12 @@ import MyFooter from '@/components/MyFooter.vue';
 }
 
 }
+@media (max-width: 767px){
+    .wrapper{
+        .content-slot{
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    }
+    
+}
 </style>

@@ -18,11 +18,21 @@ import { Icon } from '@iconify/vue'
         align-items: center;
         justify-content: center;
         text-align: center;
-        line-height: 2rem;
         height: auto;
+        
         .home_icon{
             height: 2rem;
             width: 2rem;
         }
     }
+    @media (max-width: 767px){
+    .dontsmoke{
+        height: auto;
+        width: auto;
+font-size: 12px;
+font-weight: 100;
+    }
+    
+}
+    
 </style>

@@ -11,9 +11,10 @@
 <style lang="scss" scoped>
 .main-wrapper{
   display: flex;
-  justify-content: center;
-    max-width: 70rem;
-    max-height: 45rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .fade-enter-active {
   transition: opacity 1s ease;

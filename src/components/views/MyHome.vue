@@ -2,9 +2,9 @@
        <div class="dontsmoke" > 
               <h2 class="dontsmoke_header">Узнай сколько ты сэкономил денег</h2> 
               <MySelect v-model="homeState.nameOfDrug" :options="selectState.drugsArray"></MySelect>
-              <MyInput class="dontsmoke_input" v-model="homeState.usageValue" placeholder="Сколько ты употреблял за день (пачек/грамм)?"></MyInput>
-              <MyInput class="dontsmoke_input" v-model="homeState.costValue" placeholder="Укажи стоимость за единцу продукта (пачки/грамма) в рублях"></MyInput>
-              <MyInput class="dontsmoke_input" v-model="homeState.daysValue" placeholder="Сколько дней ты уже не употребляшь?"></MyInput>
+              <MyInput class="dontsmoke_input" v-model="homeState.usageValue" placeholder="Употребление в день (пачек/грамм)"></MyInput>
+              <MyInput class="dontsmoke_input" v-model="homeState.costValue" placeholder="Стоимость за единцу продукта"></MyInput>
+              <MyInput class="dontsmoke_input" v-model="homeState.daysValue" placeholder="Дней без употребления"></MyInput>
               <Transition name="fade" mode="out-in"> 
                      <div :key="Date.now()" class="fact-wrapper">
                             <div  v-show="homeState.usageValue && homeState.costValue && homeState.daysValue"> {{ homeState.endCost.value }} </div>
@@ -48,6 +48,7 @@ const homeState = homeStore()
               border: 1px solid $btn-text;
               padding: 1rem;
               border-radius: 10px;
+              margin-top: 1rem;
               &-random{
                      font-weight: 300;
               }
@@ -58,8 +59,6 @@ const homeState = homeStore()
        .fact-wrapper{
               display: flex;
               flex-direction: column;
-              justify-content: space-around;
-              height: 20%;
        }
        .fade-enter-active
               {
@@ -71,4 +70,20 @@ const homeState = homeStore()
               opacity: 0;
               }
 }
+@media (max-width: 767px){
+        .dontsmoke{
+              height: 100%;
+              width: 100%;
+              padding: 1rem;
+              &_input{
+              font-size: 0.7rem;
+              }
+              .fact-wrapper{
+                     .dontsmoke_fact{
+                     font-size: 12px;
+              }
+              }
+        }
+        
+    }
 </style>

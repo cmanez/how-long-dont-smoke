@@ -2,13 +2,13 @@
      <div class="footer">
             <ul class="footer_links">
                 <div class="footer_links_link-item">
-                    <li><icon class="icon" icon="mdi:github"/> <a href="https://github.com/cmanez">GitHub</a></li> 
-                    <li><icon class="icon" icon="ic:baseline-telegram"/><a href="https://t.me/cmanezz">Telegram</a></li>
+                    <li class="footer_links_link-item-one"><icon class="icon" icon="mdi:github"/> <a href="https://github.com/cmanez">GitHub</a></li> 
+                    <li class="footer_links_link-item-one"><icon class="icon" icon="ic:baseline-telegram"/><a href="https://t.me/cmanezz">Telegram</a></li>
                 </div>
                 <div class="footer_links_vertborder"></div>
                 <div class="footer_links_link-item">
-                    <li><icon class="icon" icon="ri:vk-fill"/><a href="https://vk.com/sevrin_a">VK</a></li> 
-                    <li><icon class="icon" icon="mdi:instagram"/><a href="https://www.instagram.com/lean.044">Instagram</a></li>
+                    <li class="footer_links_link-item-one"><icon class="icon" icon="ri:vk-fill"/><a href="https://vk.com/sevrin_a">VK</a></li> 
+                    <li class="footer_links_link-item-one"><icon class="icon" icon="mdi:instagram"/><a href="https://www.instagram.com/lean.044">Instagram</a></li>
                 </div>
             </ul>
         </div>
@@ -63,6 +63,14 @@
             width: 1px;
             margin-right: 1rem;
             
+        }
+    }
+}
+@media (max-width: 767px){
+    .footer{
+        justify-content: center;
+        &_links_link-item-one{
+            display: flex;
         }
     }
 }
